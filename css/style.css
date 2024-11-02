@@ -41,29 +41,31 @@ nav {
 }
 
 /* CSS para hacer flex el texto y la imagen del index */
-.flex-container-index {
-    display: flex;
-    justify-content: space-between;
+.main-container {
     align-items: center;
     padding: 0 1em;
 }
  
-.flex-item-index {
+.main-text {
     max-width: 50%;
+    float: left;
+    padding-right: 1em;
+    font-size: 0.9em;
 }
 
-.flex-item-index ul {
+.main-text ul {
     list-style-image: url(../media/dino_icon.png);
     list-style-position: inside;
 }
 
-.flex-item-index li {
+.main-text li {
     padding-left: 10px;
 }
 
-.flex-item-index img{
-    max-width: 100%;
+.main-container img {
+    max-width: 45%;
     height: auto;
+    float: inline-end;
 }
 
 video{
@@ -79,6 +81,11 @@ video{
     font-size: 1.5em;
     font-weight: bold;
     padding-bottom: 1em;
+}
+
+iframe {
+    width: 800px;
+    height: 300px;
 }
 
 /* CSS para el formulario de contacto */
@@ -188,24 +195,41 @@ textarea {
     max-width: 400px;
     height: 200px;
 }
+
+/* MediaQuery para adaptar el index a pantallas de tablet */
+.main-text {
+    max-width: 100%;
+    padding: 0 0.5em 1em 0.5em;
+    font-size: 0.9em;
+}
+
+.main-container img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+    float: none;
+}
+
+/* MediaQuery para adaptar el ancho del Google Maps según la pantalla */
+iframe {
+    width: 600px;
+    height: 200px;
+}
 }
 
 @media (max-width: 600px) {
 /* MediaQuery para adaptar la posición de la imagen y el texto del index para pantallas de celular */
-.flex-container-index {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-    
-.flex-item-index {
+.main-text {
     max-width: 100%;
-    padding: 1em 0;
+    padding: 0 0.5em 1em 0.5em;
+    font-size: 0.9em;
 }
 
-.flex-item-index img{
-    max-width: 100%;
-    height: auto;
+.main-container img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+    float: none;
 }
 
 /* MediaQuery para adaptar el formulario de contacto a pantallas de celular */
@@ -227,5 +251,19 @@ textarea {
 .grid-cuatro {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75em 0.75em;
+}
+
+/* MediaQuery para adaptar el ancho del Google Maps según la pantalla */
+iframe {
+    width: 300px;
+    height: 200px;
+}
+
+.maps p {
+    font-size: 75%;
+}
+
+footer {
+    font-size: 75%;
 }
 }
