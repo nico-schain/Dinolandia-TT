@@ -1,0 +1,231 @@
+* {
+    font-family: "Playwrite GB S", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS para el navegador del header */
+header {
+    text-align: center;
+    background-image: url(../media/fondo.png);
+    background-size: cover;
+    background-position: top;
+}
+
+nav {
+    margin-bottom: 0.5em;
+}
+
+.navegador-header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 1em;
+}
+
+.navegador-header li {
+    background-color: #3e4e3d;
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.navegador-header a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.navegador-header a:hover {
+    color: #91b68e;
+}
+
+/* CSS para hacer flex el texto y la imagen del index */
+.flex-container-index {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+}
+ 
+.flex-item-index {
+    max-width: 50%;
+}
+
+.flex-item-index ul {
+    list-style-image: url(../media/dino_icon.png);
+    list-style-position: inside;
+}
+
+.flex-item-index li {
+    padding-left: 10px;
+}
+
+.flex-item-index img{
+    max-width: 100%;
+    height: auto;
+}
+
+video{
+    display: block;
+    width: 70vw;
+    padding: 1em 0;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.maps {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+/* CSS para el formulario de contacto */
+
+.contact {
+    margin: 0.25em 1em;
+    padding: 0 0.25em;
+    text-align: center;
+}
+
+fieldset {
+    font-size: 80%;
+    width: 60vw;
+    margin: 0 auto;
+    padding-top: 1em;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    max-width: 100%;
+}
+
+/* CSS y Flexbox de products.html */
+.tarjeta {
+    font-size: 0.8em;
+    text-align: center;
+    background: #91b68e;
+    margin-bottom: 1.5em;
+    width: 50%;
+    box-sizing: border-box; /* Para que el border no haga que las tarjetas desborden */
+    border: 1px solid #3e4e3d;
+    padding: 0.5em;
+}
+
+.tarjeta img {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+
+.tarjeta img:hover{
+    opacity: 0.8; /* Para hacer la imagen traslucida cuando pase el cursor */
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* CSS para el Grid de reviews.html */
+.contenedor {
+    max-width: 1200px;  
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+
+.grid-cuatro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25em 1em;
+}
+
+.reseña {
+    font-size: 0.75em;
+    padding: 0.5em;
+    background-color: #91b68e;
+}
+
+.reseña h2 {
+    text-align: center;
+}
+
+/* CSS para el footer, con los íconos Fontawesome */
+footer {
+    background-color: #3e4e3d;
+    color: white;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.icons a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.icons a:hover {
+    color: #91b68e;
+}
+
+i {
+    font-size: 1.5em;    
+    padding: 0.25em 1em 0 1em;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+/* MediaQuery para adaptar el formulario de contacto a pantallas de tablet*/
+fieldset {
+    width: 80vw;
+}
+
+textarea {
+    max-width: 400px;
+    height: 200px;
+}
+}
+
+@media (max-width: 600px) {
+/* MediaQuery para adaptar la posición de la imagen y el texto del index para pantallas de celular */
+.flex-container-index {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+    
+.flex-item-index {
+    max-width: 100%;
+    padding: 1em 0;
+}
+
+.flex-item-index img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* MediaQuery para adaptar el formulario de contacto a pantallas de celular */
+.contact {
+    margin: 0 0.25em;
+    padding: 0;
+}
+
+fieldset {
+    width: 100vw;
+}
+
+textarea {
+    max-width: 100%;
+    height: 200px;
+}
+
+/* MediaQuery para adaptar el grid de reseñas a pantallas de celular (bajar a 2 columnas) */
+.grid-cuatro {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75em 0.75em;
+}
+}
