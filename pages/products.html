@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/70deb04e67.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Quicksand:wght@300..700&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/70deb04e67.js" crossorigin="anonymous"></script>
-    <title>Dinolandia - Productos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Dinolandia - Reseñas</title>
 </head>
 
 <body>
@@ -26,68 +23,114 @@
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <section class="products">
-            <article class="tarjeta">
-                <a href="en-construccion.html">
-                    <figure>
-                        <img src="../media/dino-juguetes2.jpg" alt="Juguetes">
-                    </figure>
-                </a>
-                <div class="tarjeta-content">
-                    <h2>Juguetes y juegos de mesa </h2>
-                    <p>Explora nuestra divertida colección de juguetes y juegos de mesa inspirados en dinosaurios. Desde
-                        figuras coleccionables hasta emocionantes juegos de estrategia, cada artículo está diseñado para
-                        fomentar la imaginación y el juego activo. ¡Perfectos para desarrollar habilidades sociales y
-                        disfrutar de momentos inolvidables en familia!</p>
-                </div>
-            </article>
+        <section class="main-container">
+            <h2>Productos disponibles</h2>
 
-            <article class="tarjeta">
-                <a href="en-construccion.html">
-                    <figure>
-                        <img src="../media/dino-disfraz-ancho.jpg" alt="Disfraces">
-                    </figure>
-                </a>
-                <div class="tarjeta-content">
-                    <h2>Disfraces e indumentaria </h2>
-                    <p>Convierte cada día en una aventura prehistórica con nuestros impresionantes disfraces de
-                        dinosaurios. Desde trajes realistas de Tiranosaurios hasta coloridos Pterodáctilos, nuestros
-                        disfraces garantizan diversión y emoción. Perfectos para fiestas, juegos de rol o simplemente
-                        para dar rienda suelta a la creatividad de los pequeños.</p>
+            <div id="productos">
+                <div class="producto">
+                    <img src="../media/dino-pua.jpg" alt="Muñeco de Tiranosaurio" class="mini-img">
+                    <span>Muñeco de Tiranosaurio</span>
+                    <button onclick="mostrarInfo('trex')">Mas información</button>
+                    <button onclick="ocultarInfo('trex')">Ocultar información</button>
+                    <ul id="info-trex"></ul>
                 </div>
-            </article>
+                <div class="producto">
+                    <img src="../media/juego-de-mesa.webp" alt="Juego de mesa" class="mini-img">
+                    <span>Mundo Jurasico (Juego de mesa)</span>
+                    <button onclick="mostrarInfo('juegoMesa')">Mas información</button>
+                    <button onclick="ocultarInfo('juegoMesa')">Ocultar información</button>
+                    <ul id="info-juegoMesa"></ul>
+                </div>
+                <div class="producto">
+                    <img src="../media/dino-juguetes.jpg" alt="Juguetes surtidos" class="mini-img">
+                    <span>Muñecos surtidos</span>
+                    <button onclick="mostrarInfo('surtidos')">Mas información</button>
+                    <button onclick="ocultarInfo('surtidos')">Ocultar información</button>
+                    <ul id="info-surtidos"></ul>                    
+                </div>
+                <div class="producto">
+                    <img src="../media/dino-disfraz.jpg" alt="Disfraz de T-rex" class="mini-img">
+                    <span>Disfraz de T-rex</span>
+                    <button onclick="mostrarInfo('disfraz')">Mas información</button>
+                    <button onclick="ocultarInfo('disfraz')">Ocultar información</button>
+                    <ul id="info-disfraz"></ul>
+                </div>
+                <div class="producto">
+                    <img src="../media/dino-lampara.webp" alt="Lámpara" class="mini-img">
+                    <span>Lámpara de triceratops</span>
+                    <button onclick="mostrarInfo('lampara')">Mas información</button>
+                    <button onclick="ocultarInfo('lampara')">Ocultar información</button>
+                    <ul id="info-lampara"></ul>
+                </div>
+                <div class="producto">
+                    <img src="../media/parque-jurasico.jpg" alt="Parque Jurásico" class="mini-img">
+                    <span>Parque Jurásico (Libro)</span>
+                    <button onclick="mostrarInfo('libro')">Mas información</button>
+                    <button onclick="ocultarInfo('libro')">Ocultar información</button>
+                    <ul id="info-libro"></ul>
+                </div>
+            </div>
+            <br><br>
+            <h2>Tienda online</h2>
+    
+            <div id="productos">
+                <div class="producto">
+                    <span>Muñeco de Tiranosaurio - $3500</span>
+                    <span>Stock: <span id="stock-trex">25</span></span>
+                    <button onclick="agregarAlCarrito('T-rex', 3500, 'trex')">Agregar</button>
+                </div>
+                <div class="producto">
+                    <span>Mundo Jurasico (Juego de mesa) - $50000</span>
+                    <span>Stock: <span id="stock-juegoMesa">10</span></span>
+                    <button onclick="agregarAlCarrito('Mundo Jurásico (Juego de mesa)', 50000, 'juegoMesa')">Agregar</button>
+                </div>
+                <div class="producto">
+                    <span>Muñecos surtidos - $3000</span>
+                    <span>Stock: <span id="stock-surtidos">50</span></span>
+                    <button onclick="agregarAlCarrito('Muñecos surtidos', 3000, 'surtidos')">Agregar</button>
+                </div>
+                <div class="producto">
+                    <span>Disfraz de T-rex - $150000</span>
+                    <span>Stock: <span id="stock-disfraz">5</span></span>
+                    <button onclick="agregarAlCarrito('Disfraz de T-rex', 150000, 'disfraz')">Agregar</button>
+                </div>
+                <div class="producto">
+                    <span>Lámpara de triceratops - $90000</span>
+                    <span>Stock: <span id="stock-lampara">5</span></span>
+                    <button onclick="agregarAlCarrito('Lámpara de triceratops', 90000, 'lampara')">Agregar</button>
+                </div>
+                <div class="producto">
+                    <span>Parque Jurásico (Libro) - $25000</span>
+                    <span>Stock: <span id="stock-libro">12</span></span>
+                    <button onclick="agregarAlCarrito('Parque Jurásico (Libro)', 25000, 'libro')">Agregar</button>
+                </div>
+            </div>
 
-            <article class="tarjeta">
-                <a href="en-construccion.html">
-                    <figure>
-                        <img src="../media/dino-libros.jpg" alt="Libros">
-                    </figure>
-                </a>
-                <div class="tarjeta-content">
-                    <h2>Libros y revistas </h2>
-                    <p>Sumérgete en el fascinante mundo de los dinosaurios con nuestra selección de libros y revistas.
-                        Desde guías ilustradas sobre diferentes especies hasta relatos de aventuras prehistóricas,
-                        nuestros títulos son ideales para aprender mientras se entretienen. ¡Inspira a los pequeños
-                        paleontólogos a explorar más sobre sus criaturas favoritas!</p>
-                </div>
-            </article>
+            <div id="carrito">
+                <h2>Carrito de Compras</h2>
+                <ul id="lista-carrito"></ul>
+                <p>Subtotal: $<span id="subtotal-carrito">0</span></p>
+                <p>Descuento: $<span id="descuento-carrito">0</span></p>
+                <p>IVA (21%): $<span id="iva-carrito">0</span></p>
+                <p><strong>Total: $<span id="total-carrito">0</span></strong></p>
+                <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+                <button onclick="mostrarCheckout()">Checkout</button>
+            </div>
 
-            <article class="tarjeta">
-                <a href="en-construccion.html">
-                    <figure>
-                        <img src="../media/dino-fiesta.jpg" alt="Fiestas">
-                    </figure>
-                </a>
-                <div class="tarjeta-content">
-                    <h2>Decoración para fiestas </h2>
-                    <p>Haz que tu próxima celebración sea inolvidable con nuestra decoración temática de dinosaurios.
-                        Con globos, pancartas y centros de mesa únicos, cada detalle transformará tu fiesta en una
-                        verdadera aventura prehistórica. ¡Ideal para cumpleaños y eventos especiales donde los
-                        dinosaurios son los protagonistas!</p>
+            <!-- Modal de Checkout -->
+            <div id="checkout-modal">
+                <div class="checkout-content">
+                    <h2>Finalizar Compra</h2>
+                    <p>Subtotal: $<span id="modal-subtotal">0</span></p>
+                    <p>Descuento: $<span id="modal-descuento">0</span></p>
+                    <p>IVA: $<span id="modal-iva">0</span></p>
+                    <p><strong>Total a Pagar: $<span id="modal-total">0</span></strong></p>
+                    <button onclick="realizarCompra()">Confirmar Compra</button>
+                    <button onclick="cerrarCheckout()">Cancelar</button>
                 </div>
-            </article>
+            </div>
         </section>
     </main>
 
@@ -100,6 +143,7 @@
         <h4>¡Seguinos en nuestras redes sociales!</h4>
         <p>Dirección: Calle Falsa 123 - Teléfono: 0000-0000</p>
     </footer>
+    <script src="../script/script.js"></script>
 </body>
 
 </html>
